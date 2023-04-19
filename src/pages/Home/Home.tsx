@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Data } from "@/data/data";
-import { addFavorite, addPeople } from '@/redux/states';
+import { addPeople } from '@/redux/states';
 import PeopleTable from './components/peopleTable';
 
 export interface HomeInterface {};
@@ -14,9 +14,13 @@ const Home: React.FC<HomeInterface> = () => {
   }, [])
   
   return (
-    <PeopleTable />
+    <div className='home_container'>
+      <PeopleTable />
+    </div>
   )
 };
+
+
 
 export default Home;
 

@@ -3,7 +3,7 @@ import { DataGrid, GridRenderCellParams } from '@mui/x-data-grid';
 import { useDispatch, useSelector } from "react-redux";
 import { Person } from "@/models";
 import { AppStore } from "@/redux/store";
-import { addFavorite, removeFavorite } from "@/redux/states";
+import { removeFavorite } from "@/redux/states";
 import { IconButton } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 
@@ -77,6 +77,7 @@ const FavoriteTable: React.FC<FavoriteTableInterface> = () => {
         disableRowSelectionOnClick
         autoHeight     
         getRowId={(row: any) => row.id}
+
       />
     )
 };

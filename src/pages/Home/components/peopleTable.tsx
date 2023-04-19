@@ -75,7 +75,6 @@ const PeopleTable: React.FC<PeopleTableInterface> = () => {
     
       ]
 
-
     return (
         <DataGrid 
         initialState={{
@@ -88,6 +87,10 @@ const PeopleTable: React.FC<PeopleTableInterface> = () => {
         disableRowSelectionOnClick
         autoHeight     
         getRowId={(row: any) => row.id}
+        sx={{
+          background: "white smoke", 
+          mt: 6
+        }}
       />
     )
 };
